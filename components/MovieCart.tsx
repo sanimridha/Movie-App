@@ -20,7 +20,7 @@ import Colors from "../constants/Colors";
 import { AntDesign } from "@expo/vector-icons";
 import { getGenresByID } from "../Services";
 
-const MovieCart = ({ item }) => {
+const MovieCart = ({ item, index }) => {
     const [genreArray, setGenreArray] = useState([]);
     const genres = [];
 
@@ -29,13 +29,12 @@ const MovieCart = ({ item }) => {
     }, []);
 
     const data = genreArray?.map(function (item) {
-        console.log(item);
         genres.push(getGenresByID(item));
     });
 
     return (
         <TouchableOpacity
-            key={item?.id}
+            key={index}
             activeOpacity={0.5}
             style={{
                 margin: 5,
@@ -98,8 +97,9 @@ const MovieCart = ({ item }) => {
                             backgroundColor: "transparent",
                         }}
                     >
-                        {genres?.map(item => (
+                        {genres?.map((item, index) => (
                             <Text
+                                key={index}
                                 style={{
                                     textTransform: "uppercase",
                                     paddingHorizontal: 5,
