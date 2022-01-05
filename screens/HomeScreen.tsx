@@ -84,8 +84,8 @@ export default function HomeScreen({ navigation }: RootTabScreenProps<"Home">) {
     //Handler for refresh by pull refresh
     const onRefresh = () => {
         if (page !== 1) {
-            // serverDataLoaded([]);
-            // setClientData([]);
+            serverDataLoaded([]);
+            setClientData([]);
             setPage(1);
             setRefresh(true);
             setLoadMore(false);
