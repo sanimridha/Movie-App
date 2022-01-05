@@ -19,8 +19,10 @@ import Layout from "../constants/Layout";
 import Colors from "../constants/Colors";
 import { AntDesign } from "@expo/vector-icons";
 import { getGenresByID } from "../Services";
+import { useNavigation } from "@react-navigation/native";
 
 const MovieCart = ({ item, index }) => {
+    const navigation = useNavigation();
     const [genreArray, setGenreArray] = useState([]);
     const genres = [];
 
@@ -34,7 +36,7 @@ const MovieCart = ({ item, index }) => {
 
     return (
         <TouchableOpacity
-            key={index}
+            // key={index}
             activeOpacity={0.5}
             style={{
                 margin: 5,
@@ -46,7 +48,9 @@ const MovieCart = ({ item, index }) => {
                 elevation: 5,
                 backgroundColor: "white",
             }}
-            onPress={() => {}}
+            onPress={() => {
+                navigation.navigate("Details", item?.item?.id);
+            }}
         >
             <>
                 <Image

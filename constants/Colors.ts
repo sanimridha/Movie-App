@@ -19,4 +19,6 @@ export default {
     star: "#FFC319",
     genreyBackground: "#DBE3FF",
     genreyText: "#88A4E8",
+    transparentBlack: "rgba(105,105,105, 0.5)",
+    transparentDark: "rgba(0, 0, 0, 0.6)",
 };

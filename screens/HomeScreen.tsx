@@ -106,32 +106,30 @@ export default function HomeScreen({ navigation }: RootTabScreenProps<"Home">) {
 
     return (
         <View style={styles.container}>
-            {isLoading ? (
+            {/* {isLoading ? (
                 <ActivityIndicator
                     size={"small"}
                     color={"skyblue"}
                     style={{ flex: 1, alignItems: "center" }}
                 />
-            ) : (
-                <>
-                    {/* <Text style={styles.title}>Movies</Text> */}
-                    <FlatList
-                        ref={flatListRef}
-                        data={clientData}
-                        style={{ height: "100%" }}
-                        // keyExtractor={(item, index) => item?.id}
-                        onEndReachedThreshold={0.01}
-                        onEndReached={handleLoadMore}
-                        refreshing={refresh}
-                        onRefresh={() => onRefresh()}
-                        ListFooterComponent={renderFooter}
-                        showsVerticalScrollIndicator={false}
-                        renderItem={(item, index) => (
-                            <MovieCart item={item} index={index} />
-                        )}
-                    />
-                </>
-            )}
+            ) : ( */}
+            <>
+                {/* <Text style={styles.title}>Movies</Text> */}
+                <FlatList
+                    ref={flatListRef}
+                    data={clientData}
+                    style={{ height: "100%" }}
+                    // keyExtractor={(item, index) => item?.id}
+                    onEndReachedThreshold={0.01}
+                    onEndReached={handleLoadMore}
+                    refreshing={refresh}
+                    onRefresh={() => onRefresh()}
+                    ListFooterComponent={renderFooter}
+                    showsVerticalScrollIndicator={false}
+                    renderItem={item => <MovieCart item={item} />}
+                />
+            </>
+            {/* )} */}
         </View>
     );
 }
