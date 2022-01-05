@@ -39,7 +39,7 @@ export default function DetailsScreen(props) {
         await axios
             .request(options)
             .then(function (response) {
-                console.log("movie details response", response?.data);
+                // console.log("movie details response", response?.data);
                 setMovieData(response?.data);
                 setGenreArray(response?.data?.genres);
                 setisLoading(false);
