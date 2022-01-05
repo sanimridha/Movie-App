@@ -241,7 +241,7 @@ export default function DetailsScreen(props) {
                                 <>
                                     <Image
                                         source={{
-                                            uri: `${IMAGE_PATH}${MovieData?.production_companies[0].logo_path}`,
+                                            uri: `${IMAGE_PATH}${MovieData.production_companies[0].logo_path}`,
                                         }}
                                         style={{
                                             height: 50,
