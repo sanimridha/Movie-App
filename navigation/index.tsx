@@ -92,21 +92,6 @@ function BottomTabNavigator() {
                     tabBarIcon: ({ color }) => (
                         <TabBarIcon name="home" color={color} />
                     ),
-                    // headerRight: () => (
-                    //     <Pressable
-                    //         onPress={() => navigation.navigate("Details")}
-                    //         style={({ pressed }) => ({
-                    //             opacity: pressed ? 0.5 : 1,
-                    //         })}
-                    //     >
-                    //         <FontAwesome
-                    //             name="info-circle"
-                    //             size={25}
-                    //             color={Colors[colorScheme].text}
-                    //             style={{ marginRight: 15 }}
-                    //         />
-                    //     </Pressable>
-                    // ),
                 })}
             />
             <BottomTab.Screen

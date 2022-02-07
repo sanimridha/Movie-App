@@ -1,22 +1,18 @@
 import axios from "axios";
-import { StatusBar } from "expo-status-bar";
 import { useEffect, useState } from "react";
 import {
     ActivityIndicator,
     Image,
     ImageBackground,
-    Platform,
     ScrollView,
     StyleSheet,
     TouchableOpacity,
 } from "react-native";
 
-import EditScreenInfo from "../components/EditScreenInfo";
 import { Text, View } from "../components/Themed";
-import { API_BASE_URL, AUTH_KEY, IMAGE_PATH } from "../config";
-import { AntDesign, Feather, Ionicons } from "@expo/vector-icons";
+import { AUTH_KEY, IMAGE_PATH } from "../config";
+import { AntDesign, Ionicons } from "@expo/vector-icons";
 import Colors from "../constants/Colors";
-import { getGenresByID } from "../Services";
 
 export default function DetailsScreen(props) {
     const MovieID = props?.route?.params;

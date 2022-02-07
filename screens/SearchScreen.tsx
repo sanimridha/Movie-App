@@ -3,7 +3,7 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 import { ScrollView, StyleSheet, TextInput } from "react-native";
 import MovieCart from "../components/MovieCart";
-import { Text, View } from "../components/Themed";
+import { View } from "../components/Themed";
 import { AUTH_KEY } from "../config";
 
 export default function SearchScreen() {
